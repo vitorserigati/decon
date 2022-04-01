@@ -9,7 +9,7 @@ def calculator(opcao, valor): #Criação da Função para o cálculo, com a opç
             sequencia += str(resto) #transforma a variável resto em string, enquanto concatena com o valor anterior
             valorcont = valorcont//2 #Reatribui o valor de contagem com o resultado da divisão pela base (arredondado)
             resultado = sequencia[::-1] #atribui a sequencia de forma invertida ao resultado final
-    elif (opcao == 2):  #verifica a opção. Se for igual a 1, realizará a covnersão para hexadecimal
+    elif (opcao == 2):  #verifica a opção. Se for igual a 2, realizará a covnersão para hexadecimal
         sequencia = ''
         valorcont = valor
         resto = 0
@@ -32,7 +32,7 @@ def calculator(opcao, valor): #Criação da Função para o cálculo, com a opç
             sequencia += str(resto)
             valorcont = valorcont//16
             resultado = sequencia[::-1]
-    elif(opcao == 3):   #verifica a opção. Se for igual a 1, realizará a covnersão para octal
+    elif(opcao == 3):   #verifica a opção. Se for igual a 3, realizará a covnersão para octal
         sequencia = ''
         valorcont = valor
         resto = 0
