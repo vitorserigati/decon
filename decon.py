@@ -1,6 +1,7 @@
 def calculator(opcao, valor): #Criação da Função para o cálculo, com a opção escolhida e valor informados
     resultado = ''  #Resultado final das contas
     if (opcao == 1):    #verifica a opção. Se for igual a 1, realizará a covnersão para binário
+        print("Você escolheu a conversão para binário: ")
         sequencia = '' #sequencia recebida das contas
         valorcont = valor #atribuição do valor recebido à variável usada no looping
         resto = 0  
@@ -10,6 +11,7 @@ def calculator(opcao, valor): #Criação da Função para o cálculo, com a opç
             valorcont = valorcont//2 #Reatribui o valor de contagem com o resultado da divisão pela base (arredondado)
             resultado = sequencia[::-1] #atribui a sequencia de forma invertida ao resultado final
     elif (opcao == 2):  #verifica a opção. Se for igual a 2, realizará a covnersão para hexadecimal
+        print("Você escolheu a conversão para hexadecimal: ")
         sequencia = ''
         valorcont = valor
         resto = 0
@@ -33,6 +35,7 @@ def calculator(opcao, valor): #Criação da Função para o cálculo, com a opç
             valorcont = valorcont//16
             resultado = sequencia[::-1]
     elif(opcao == 3):   #verifica a opção. Se for igual a 3, realizará a covnersão para octal
+        print("Você escolheu a conversão para Octal: ")
         sequencia = ''
         valorcont = valor
         resto = 0
@@ -45,7 +48,7 @@ def calculator(opcao, valor): #Criação da Função para o cálculo, com a opç
 
 #Início da interação com o Usuário
 
-print('Escolha uma opção: \n[1] = Conversor de Decimal para binário: \n[2] = Conversor de decimal para Hexadecimal: \n[3] = Conversor de decimal para octal: ')
+print('Escolha uma opção: \n[1] = Conversor de Decimal para binário: \n[2] = Conversor de Decimal para Hexadecimal: \n[3] = Conversor de Decimal para Octal: ')
 opcao = int(input())#atribuição da opção escolhida à variável
 valor = int(input('Digite o valor que deseja converter: ')) #valor escolhido é digitado e guardado
 print(calculator(opcao,valor)) #imprime o resultado da função com os argumentos escolhidos
