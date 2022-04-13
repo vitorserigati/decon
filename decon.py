@@ -85,7 +85,7 @@ label1.place(x=30, y=330)
 label2=Label(text="Danilo Paz RGM - 30357136")
 label2.place(x=30, y=360)
 
-label3=Label(text="Henrique Serigati de Oliveira Basso RGM - ")
+label3=Label(text="Henrique Serigati de Oliveira Basso RGM - 30315921")
 label3.place(x=30, y=390)
 
 label4=Label(text="Vitor Serigati de Oliveira Basso RGM - 30348820")

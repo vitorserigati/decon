@@ -25,7 +25,7 @@ Proposto pelo curso de Análise e Desenvolvimento de Sistemas da Universidade Cr
 |Nome dos Alunos: | RGM:             |
 |-----------------|------------------|
 |Vitor Serigati de Oliveira Basso| 30348820   |
-|Henrique Serigati de Oliveira Basso| |
+|Henrique Serigati de Oliveira Basso| 30315921 |
 |Alisson Cavalcante da Silva| 29431824        |
 |Danilo Paz|        30357136                  |
    
