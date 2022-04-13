@@ -17,7 +17,7 @@ Proposto pelo curso de Análise e Desenvolvimento de Sistemas da Universidade Cr
 
 ## Linguagem utilizada:
 
--Python -versão- 3.10
+- Python -versão- 3.10
 
 ---
 
@@ -33,7 +33,7 @@ Proposto pelo curso de Análise e Desenvolvimento de Sistemas da Universidade Cr
 
 ## Versão do Sistema:
 
--2.0
+- 2.0
 
 
 # Exemplos de funcionamento do programa:
