@@ -19,7 +19,7 @@ def converter_binario(): #criação da função que converterá em binários
 
 
     resultado = Label(janela, text=("Resultado: "+ resultadof), width=50)  #instancia uma 'label' (texto) com o resultado da função
-    resultado.place(x=80, y=250) #adiciona o texto à janela, na posição indicada
+    resultado.place(x=70, y=250) #adiciona o texto à janela, na posição indicada
 
 def converter_hexa(): #criação da função que converterá em hexadecimal
     numero=int(dado_usuario.get())
@@ -46,7 +46,7 @@ def converter_hexa(): #criação da função que converterá em hexadecimal
         resultadof = sequencia[::-1]
 
         resultado = Label(janela, text=("Resultado: "+ resultadof), width=50) #instancia uma 'label' (texto) com o resultado da função
-        resultado.place(x=80, y=250)  #adiciona o texto à janela, na posição indicada
+        resultado.place(x=70, y=250)  #adiciona o texto à janela, na posição indicada
 
 def converter_octa(): #criação da função que converterá em octal
     numero=int(dado_usuario.get())
@@ -59,7 +59,7 @@ def converter_octa(): #criação da função que converterá em octal
         resultadof = sequencia[::-1]
 
         resultado = Label(janela, text=("Resultado: "+ resultadof), width=50) #instancia uma 'label' (texto) com o resultado da função
-        resultado.place(x=80, y=250)  #adiciona o texto à janela, na posição indicada
+        resultado.place(x=70, y=250)  #adiciona o texto à janela, na posição indicada
 
 
 label=Label(text="Digite o número decimal", width=50) #Criação do texto (label) para informar ao usuário digitar um número
@@ -80,18 +80,18 @@ botao_octa.place(x=165, y=200) #posicionamento do botão octa
 
 #Nome e RGM dos alunos
 label1=Label(text="Alisson Cavalcante da Silva RGM - 29431824")
-label1.place(x=30, y=280)
+label1.place(x=30, y=330)
 
 label2=Label(text="Danilo Paz RGM - ")
-label2.place(x=30, y=310)
+label2.place(x=30, y=360)
 
 label3=Label(text="Henrique Serigati de Oliveira Basso RGM - ")
-label3.place(x=30, y=340)
+label3.place(x=30, y=390)
 
 label4=Label(text="Vitor Serigati de Oliveira Basso RGM - 30348820")
-label4.place(x=30, y=370)
+label4.place(x=30, y=420)
 
 label5=Label(text="Projeto Interdisciplinar - Universidade Cruzeiro do Sul")
-label5.place(x=30, y=400)
+label5.place(x=30, y=450)
 
-janela.mainloop()
+janela.mainloop() # faz com que a janela continue aberta, até que se precione o X para fechar
