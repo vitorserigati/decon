@@ -27,7 +27,7 @@ Proposto pelo curso de Análise e Desenvolvimento de Sistemas da Universidade Cr
 |Vitor Serigati de Oliveira Basso| 30348820   |
 |Henrique Serigati de Oliveira Basso| |
 |Alisson Cavalcante da Silva| 29431824        |
-|Danilo Paz|                          |
+|Danilo Paz|        30357136                  |
    
 ---
 

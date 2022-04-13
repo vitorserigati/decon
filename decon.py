@@ -82,7 +82,7 @@ botao_octa.place(x=165, y=200) #posicionamento do botão octa
 label1=Label(text="Alisson Cavalcante da Silva RGM - 29431824")
 label1.place(x=30, y=330)
 
-label2=Label(text="Danilo Paz RGM - ")
+label2=Label(text="Danilo Paz RGM - 30357136")
 label2.place(x=30, y=360)
 
 label3=Label(text="Henrique Serigati de Oliveira Basso RGM - ")
