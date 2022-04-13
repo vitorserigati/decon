@@ -1,55 +1,97 @@
-def calculator(opcao, valor): #Criação da Função para o cálculo, com a opção escolhida e valor informados
-    resultado = ''  #Resultado final das contas
-    if (opcao == 1):    #verifica a opção. Se for igual a 1, realizará a covnersão para binário
-        print("Você escolheu a conversão para binário: ")
-        sequencia = '' #sequencia recebida das contas
-        valorcont = valor #atribuição do valor recebido à variável usada no looping
-        resto = 0  
-        while (valorcont > 0): #enquanto o valor da conta for maior que 0 a operação se repete
-            resto = valorcont%2 #atribui o resto da conta à variável resto 
-            sequencia += str(resto) #transforma a variável resto em string, enquanto concatena com o valor anterior
-            valorcont = valorcont//2 #Reatribui o valor de contagem com o resultado da divisão pela base (arredondado)
-            resultado = sequencia[::-1] #atribui a sequencia de forma invertida ao resultado final
-    elif (opcao == 2):  #verifica a opção. Se for igual a 2, realizará a covnersão para hexadecimal
-        print("Você escolheu a conversão para hexadecimal: ")
-        sequencia = ''
-        valorcont = valor
-        resto = 0
-        while (valorcont > 0):
-            
-            if (valorcont%16 == 10): #verifica se o valor é igual a 10
-                resto = 'A' #caso o valor seja igual a 10, atribui a letra A ao resto
-            elif (valorcont%16 == 11):
-                resto = 'B'
-            elif (valorcont%16 == 12):
-                resto = 'C'
-            elif (valorcont%16 == 13):
-                resto = 'D'
-            elif (valorcont%16 == 14):
-                resto = 'E'
-            elif (valorcont%16 == 15):
-                resto = 'F'
-            else:
-                resto = valorcont%16
-            sequencia += str(resto)
-            valorcont = valorcont//16
-            resultado = sequencia[::-1]
-    elif(opcao == 3):   #verifica a opção. Se for igual a 3, realizará a covnersão para octal
-        print("Você escolheu a conversão para Octal: ")
-        sequencia = ''
-        valorcont = valor
-        resto = 0
-        while(valorcont > 0):
-            resto = valorcont%8
-            sequencia += str(resto)
-            valorcont = valorcont//8
-            resultado = sequencia [::-1]
-    return f'O resultado da conversão é: {resultado}'   #retorna o resultado da função.
+from tkinter import * #importação da biblioteca 'tkinter', nativa do python
 
-#Início da interação com o Usuário
+janela = Tk() #instanciação da biblioteca como janela
+janela.title("Projeto Interdisciplinar") #nome da janela
+janela.geometry("500x500") #tamanho da janela
+janela.resizable(False, False) #torna o tamanho da janela fixa. (Não se pode aumentar ou diminuir)
 
-print('Escolha uma opção: \n[1] = Conversor de Decimal para binário: \n[2] = Conversor de Decimal para Hexadecimal: \n[3] = Conversor de Decimal para Octal: ')
-opcao = int(input())#atribuição da opção escolhida à variável
-valor = int(input('Digite o valor que deseja converter: ')) #valor escolhido é digitado e guardado
-print(calculator(opcao,valor)) #imprime o resultado da função com os argumentos escolhidos
 
+def converter_binario(): #criação da função que converterá em binários
+    numero = int(dado_usuario.get()) #recebe o número digitado pelo usuário, e armazena na variável 'numero'
+
+    sequencia="" #inicia uma variável str vazia
+    valorcont = numero #inicia a variavel de contagem, com o valor digitado pelo usuário
+    while(valorcont>0): #estrutura que repetirá o código, até que o valor chegue a 0
+        resto = valorcont%2 #armazena o resto da divisão do valor dividido por 2
+        sequencia += str(resto) #atribui a sequencia já existente com o resto
+        valorcont=valorcont//2 #divide o valor da contagem por 2 e armazena o resultado como inteiro
+        resultadof=sequencia[::-1] #inverte a sequência e armazena no resultado
+
+
+    resultado = Label(janela, text=("Resultado: "+ resultadof), width=50)  #instancia uma 'label' (texto) com o resultado da função
+    resultado.place(x=80, y=250) #adiciona o texto à janela, na posição indicada
+
+def converter_hexa(): #criação da função que converterá em hexadecimal
+    numero=int(dado_usuario.get())
+    sequencia = ''
+    valorcont = numero
+    while (valorcont > 0):
+
+        if (valorcont % 16 == 10):  # verifica se o valor é igual a 10
+            resto = 'A'  # caso o valor seja igual a 10, atribui a letra A ao resto
+        elif (valorcont % 16 == 11): # verifica se o valor é igual a 11
+            resto = 'B'  # caso o valor seja igual a 11, atribui a letra B ao resto
+        elif (valorcont % 16 == 12): # verifica se o valor é igual a 12
+            resto = 'C'  # caso o valor seja igual a 12, atribui a letra C ao resto
+        elif (valorcont % 16 == 13): # verifica se o valor é igual a 13
+            resto = 'D'  # caso o valor seja igual a 13, atribui a letra D ao resto
+        elif (valorcont % 16 == 14): # verifica se o valor é igual a 14
+            resto = 'E'  # caso o valor seja igual a 14, atribui a letra E ao resto
+        elif (valorcont % 16 == 15): # verifica se o valor é igual a 15
+            resto = 'F'  # caso o valor seja igual a 15, atribui a letra F ao resto
+        else:
+            resto = valorcont % 16 #armazena o resto da divisão do valor dividido por 16
+        sequencia += str(resto)
+        valorcont = valorcont // 16 #divide o valor da contagem por 16 e armazena o resultado como inteiro
+        resultadof = sequencia[::-1]
+
+        resultado = Label(janela, text=("Resultado: "+ resultadof), width=50) #instancia uma 'label' (texto) com o resultado da função
+        resultado.place(x=80, y=250)  #adiciona o texto à janela, na posição indicada
+
+def converter_octa(): #criação da função que converterá em octal
+    numero=int(dado_usuario.get())
+    sequencia = ''
+    valorcont = numero
+    while (valorcont > 0):
+        resto = valorcont % 8 #armazena o resto da divisão do valor dividido por 8
+        sequencia += str(resto)
+        valorcont = valorcont // 8 #divide o valor da contagem por 16 e armazena o resultado como inteiro
+        resultadof = sequencia[::-1]
+
+        resultado = Label(janela, text=("Resultado: "+ resultadof), width=50) #instancia uma 'label' (texto) com o resultado da função
+        resultado.place(x=80, y=250)  #adiciona o texto à janela, na posição indicada
+
+
+label=Label(text="Digite o número decimal", width=50) #Criação do texto (label) para informar ao usuário digitar um número
+label.place(x=65, y=20)  #adiciona a label à janela na posição informada
+
+dado_usuario=Entry(width=25,justify="left", font="Arial") #Criação de uma janela para o usuário digitar um valor
+dado_usuario.place(x=130, y=50) #posicionamento da janela de input do usuário
+
+botao_binario=Button(janela, text="Conversão para Binário", width=20, command=converter_binario) #criação do botão de conversão para binário. 'Command' chamará a função criada anteriormente
+botao_binario.place(x=165, y=100) #posicionamento do botão binário
+
+botao_hexadecimal=Button(janela, text="Conversão para Hexadecimal", width=25, command=converter_hexa) #criação do botão de conversão para headecimal. 'Command' chamará a função criada anteriormente
+botao_hexadecimal.place(x=145, y=150) #posicionamento do botão hexadecimal
+
+botao_octa=Button(janela, text="Conversão para Octa", width=20, command=converter_octa) #criação do botão de conversão para octal. 'Command' chamará a função criada anteriormente
+botao_octa.place(x=165, y=200) #posicionamento do botão octa
+
+
+#Nome e RGM dos alunos
+label1=Label(text="Alisson Cavalcante da Silva RGM - 29431824")
+label1.place(x=30, y=280)
+
+label2=Label(text="Danilo Paz RGM - ")
+label2.place(x=30, y=310)
+
+label3=Label(text="Henrique Serigati de Oliveira Basso RGM - ")
+label3.place(x=30, y=340)
+
+label4=Label(text="Vitor Serigati de Oliveira Basso RGM - 30348820")
+label4.place(x=30, y=370)
+
+label5=Label(text="Projeto Interdisciplinar - Universidade Cruzeiro do Sul")
+label5.place(x=30, y=400)
+
+janela.mainloop()
